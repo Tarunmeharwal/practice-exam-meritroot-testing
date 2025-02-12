@@ -2,20 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom CSS for lists */
+.ProseMirror ul {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 1.5em; /* Indentation */
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  
+  .ProseMirror ol {
+    list-style-type: decimal; /* Numbered lists (1, 2, 3) */
+    padding-left: 1.5em; /* Indentation */
+  }
+  
+  .ProseMirror ol[data-type="orderedList"] {
+    list-style-type: decimal; /* Default numbered list */
+  }
+  
+  .ProseMirror ol[data-type="orderedList"][data-start="1"] {
+    list-style-type: decimal; /* Numbered list starting from 1 */
+  }
+  
+  .ProseMirror ol[data-type="orderedList"][data-start="a"] {
+    list-style-type: lower-alpha; /* Lowercase letters (a, b, c) */
+  }
+  
+  .ProseMirror ol[data-type="orderedList"][data-start="A"] {
+    list-style-type: upper-alpha; /* Uppercase letters (A, B, C) */
+  }
+  
+  .ProseMirror ol[data-type="orderedList"][data-start="i"] {
+    list-style-type: lower-roman; /* Lowercase Roman numerals (i, ii, iii) */
+  }
+  
+  .ProseMirror ol[data-type="orderedList"][data-start="I"] {
+    list-style-type: upper-roman; /* Uppercase Roman numerals (I, II, III) */
+  }
