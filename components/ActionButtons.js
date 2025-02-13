@@ -119,7 +119,7 @@ const renderButton = (button, index) => (
 );
 
   return (
-    <div className="border-t text-sm border-gray-200 p-2 gap-2 flex flex-col mt-4 ">
+    <div className="border-t text-sm border-gray-200 p-2 gap-2 flex flex-col mt-4">
       <div className="flex justify-between items-center mx-10">
         <div className="flex gap-2">{buttonsGroup1.map(renderButton)}</div>
         <div className="flex gap-2">{buttonsGroup2.map(renderButton)}</div>

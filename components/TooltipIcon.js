@@ -2,7 +2,7 @@
 
 const TooltipIcon = ({ Icon, tooltipText, onClick, isActive, activeClass, defaultClass }) => {
   return (
-    <div className="relative group inline-block">
+    <div className="relative group inline-block ">
       <Icon
         className={`${defaultClass} ${isActive ? activeClass : ''} cursor-pointer`}
         onClick={onClick}

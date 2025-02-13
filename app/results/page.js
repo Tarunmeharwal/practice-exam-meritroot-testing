@@ -1,79 +1,3 @@
-// "use client";
-// import { useEffect, useState } from "react";
-// import { useRouter } from "next/navigation";
-
-// export default function ResultPage() {
-//   const router = useRouter();
-//   const [results, setResults] = useState(null);
-
-//   useEffect(() => {
-//     const storedResults = JSON.parse(localStorage.getItem("quizResults"));
-//     if (storedResults) {
-//       setResults(storedResults);
-//     } else {
-//       router.push("/practice"); // Redirect if no results found
-//     }
-//   }, [router]);
-
-//   if (!results) return <div className="p-4 text-blue-500">Loading...</div>;
-
-//   const { totalQuestions, correctAnswers, questionData, selectedOptions } = results;
-//   const percentage = ((correctAnswers / totalQuestions) * 100).toFixed(2);
-
-//   return (
-//     <div className="min-h-screen bg-gray-50 flex flex-col items-center p-6">
-//       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-3xl text-center">
-//         <h1 className="text-3xl font-bold text-gray-800">Quiz Results</h1>
-//         <p className="text-lg mt-2">You scored <span className="font-bold">{correctAnswers}</span> out of <span className="font-bold">{totalQuestions}</span></p>
-//         <p className={`text-xl font-semibold mt-2 ${percentage >= 70 ? "text-green-500" : "text-red-500"}`}>
-//           {percentage}% - {percentage >= 70 ? "Great Job! 🎉" : "Keep Practicing 💪"}
-//         </p>
-
-//         {/* Button Section */}
-//         <div className="mt-6 flex justify-center gap-4">
-//           <button
-//             onClick={() => router.push("/jee")}
-//             className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600"
-//           >
-//             Retry Quiz
-//           </button>
-//           <button
-//             onClick={() => router.push("/")}
-//             className="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600"
-//           >
-//             Go to Home
-//           </button>
-//         </div>
-//       </div>
-
-//       {/* Question Review Section */}
-//       <div className="w-full max-w-3xl mt-8">
-//         {questionData.map((q, index) => {
-//           const isCorrect = selectedOptions[index]?.includes(q.correctAnswer);
-//           return (
-//             <div key={index} className="bg-white p-4 rounded-lg shadow-md mb-4">
-//               <h2 className="text-lg font-bold">{index + 1}. {q.question}</h2>
-//               <p className={`mt-2 ${isCorrect ? "text-green-600" : "text-red-600"}`}>
-//                 Your Answer: {selectedOptions[index]} {isCorrect ? "✓" : "✕"}
-//               </p>
-//               <p className="text-gray-700">Correct Answer: {q.correctAnswer}</p>
-//               {q.solution && (
-//                 <details className="mt-2">
-//                   <summary className="text-blue-500 cursor-pointer">View Solution</summary>
-//                   <p className="text-gray-600 mt-1">{q.solution}</p>
-//                 </details>
-//               )}
-//             </div>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
 'use client';
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -148,12 +72,12 @@ export default function ResultPage() {
 
             {/* Action Buttons */}
             <div className="mt-8 flex justify-center gap-6 flex-wrap">
-              <button
+              {/* <button
                 onClick={() => router.push("/practice")}
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-all"
               >
                 Retry Quiz
-              </button>
+              </button> */}
               <button
                 onClick={() => router.push("/")}
                 className="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-all"
