@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@tinymce/tinymce-react": "^5.1.1",
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
     "chart.js": "^4.4.7",
     "formidable": "^3.5.2",
+    "jodit-react": "^5.2.6",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5",
     "next": "15.1.6",
